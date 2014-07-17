@@ -6,8 +6,8 @@ set timeout 10
 if { "$host" == "alias_name" } {
 	set passinfo password_string
 	set hostinfo root@host
-} elseif { "$host" == "hzweb1" } {
-	set passinfo 497e8902
+} elseif { "$host" == "alias_name2" } {
+	set passinfo password_string
 	set hostinfo root@host
 } else { 
 	puts "invaild host name"
