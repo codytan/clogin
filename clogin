@@ -4,21 +4,21 @@ set host [lindex $argv 0]
 set timeout 10
 
 if { "$host" == "alias_name" } {
-	set passinfo password_string
-	set hostinfo root@host
+    set passinfo password_string
+    set hostinfo root@host
 } elseif { "$host" == "alias_name2" } {
-	set passinfo password_string
-	set hostinfo root@host
+    set passinfo password_string
+    set hostinfo root@host
 } else { 
-	puts "invaild host name"
-	exit 70
+    puts "invaild host name"
+    exit 70
 }
 
 spawn ssh $hostinfo
 
 expect {
-  "yes/no" {send "yes\r"; exp_continue}
-  "password:" {send "$passinfo\r"}
+    "yes/no" {send "yes\r"; exp_continue}
+    "password:" {send "$passinfo\r"}
 }
 
 interact
